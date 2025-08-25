@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AutoMart - Find Your Next Car</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1 class="logo">AutoMart</h1>
+      <nav class="actions">
+        <button id="favoritesButton" class="button secondary" aria-pressed="false" title="Show favorites">
+          Favorites <span id="favoritesCount" class="badge">0</span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="filters" id="filters">
+      <div class="filter-row">
+        <div class="filter">
+          <label for="searchInput">Search</label>
+          <input id="searchInput" type="text" placeholder="Search make, model, features..." autocomplete="off">
+        </div>
+        <div class="filter">
+          <label for="makeSelect">Make</label>
+          <select id="makeSelect"><option value="">All</option></select>
+        </div>
+        <div class="filter">
+          <label for="typeSelect">Type</label>
+          <select id="typeSelect">
+            <option value="">All</option>
+            <option value="SUV">SUV</option>
+            <option value="Sedan">Sedan</option>
+            <option value="Truck">Truck</option>
+            <option value="Hatchback">Hatchback</option>
+            <option value="Coupe">Coupe</option>
+          </select>
+        </div>
+        <div class="filter">
+          <label for="yearMin">Year</label>
+          <div class="inline-inputs">
+            <input id="yearMin" type="number" placeholder="Min" min="1980" max="2035">
+            <span class="sep">-</span>
+            <input id="yearMax" type="number" placeholder="Max" min="1980" max="2035">
+          </div>
+        </div>
+        <div class="filter">
+          <label for="priceMin">Price ($)</label>
+          <div class="inline-inputs">
+            <input id="priceMin" type="number" placeholder="Min" min="0" step="500">
+            <span class="sep">-</span>
+            <input id="priceMax" type="number" placeholder="Max" min="0" step="500">
+          </div>
+        </div>
+        <div class="filter">
+          <label for="sortSelect">Sort</label>
+          <select id="sortSelect">
+            <option value="relevance">Relevance</option>
+            <option value="price-asc">Price: Low to High</option>
+            <option value="price-desc">Price: High to Low</option>
+            <option value="year-desc">Year: New to Old</option>
+            <option value="mileage-asc">Mileage: Low to High</option>
+          </select>
+        </div>
+        <div class="filter">
+          <label>&nbsp;</label>
+          <button id="resetButton" class="button" type="button">Reset</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="summary" id="summary">
+      <p><span id="resultsCount">0</span> cars found</p>
+    </section>
+
+    <section class="grid" id="grid"></section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> AutoMart. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <div class="modal" id="detailModal" aria-hidden="true">
+    <div class="modal-backdrop" data-close></div>
+    <div class="modal-dialog" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal-close" data-close aria-label="Close">×</button>
+      <div class="modal-content" id="modalContent"></div>
+    </div>
+  </div>
+
+  <script src="/scripts/app.js" type="module"></script>
+</body>
+</html>
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AutoMart - Find Your Next Car</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1 class="logo">AutoMart</h1>
+      <nav class="actions">
+        <button id="favoritesButton" class="button secondary" aria-pressed="false" title="Show favorites">
+          Favorites <span id="favoritesCount" class="badge">0</span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="filters" id="filters">
+      <div class="filter-row">
+        <div class="filter">
+          <label for="searchInput">Search</label>
+          <input id="searchInput" type="text" placeholder="Search make, model, features..." autocomplete="off">
+        </div>
+        <div class="filter">
+          <label for="makeSelect">Make</label>
+          <select id="makeSelect"><option value="">All</option></select>
+        </div>
+        <div class="filter">
+          <label for="typeSelect">Type</label>
+          <select id="typeSelect">
+            <option value="">All</option>
+            <option value="SUV">SUV</option>
+            <option value="Sedan">Sedan</option>
+            <option value="Truck">Truck</option>
+            <option value="Hatchback">Hatchback</option>
+            <option value="Coupe">Coupe</option>
+          </select>
+        </div>
+        <div class="filter">
+          <label for="yearMin">Year</label>
+          <div class="inline-inputs">
+            <input id="yearMin" type="number" placeholder="Min" min="1980" max="2035">
+            <span class="sep">-</span>
+            <input id="yearMax" type="number" placeholder="Max" min="1980" max="2035">
+          </div>
+        </div>
+        <div class="filter">
+          <label for="priceMin">Price ($)</label>
+          <div class="inline-inputs">
+            <input id="priceMin" type="number" placeholder="Min" min="0" step="500">
+            <span class="sep">-</span>
+            <input id="priceMax" type="number" placeholder="Max" min="0" step="500">
+          </div>
+        </div>
+        <div class="filter">
+          <label for="sortSelect">Sort</label>
+          <select id="sortSelect">
+            <option value="relevance">Relevance</option>
+            <option value="price-asc">Price: Low to High</option>
+            <option value="price-desc">Price: High to Low</option>
+            <option value="year-desc">Year: New to Old</option>
+            <option value="mileage-asc">Mileage: Low to High</option>
+          </select>
+        </div>
+        <div class="filter">
+          <label>&nbsp;</label>
+          <button id="resetButton" class="button" type="button">Reset</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="summary" id="summary">
+      <p><span id="resultsCount">0</span> cars found</p>
+    </section>
+
+    <section class="grid" id="grid"></section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> AutoMart. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <div class="modal" id="detailModal" aria-hidden="true">
+    <div class="modal-backdrop" data-close></div>
+    <div class="modal-dialog" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal-close" data-close aria-label="Close">×</button>
+      <div class="modal-content" id="modalContent"></div>
+    </div>
+  </div>
+
+  <script src="/scripts/app.js" type="module"></script>
+</body>
+</html>

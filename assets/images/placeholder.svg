@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <defs>
+    <linearGradient id="g" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#1f2430"/>
+      <stop offset="100%" stop-color="#0f141b"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#g)"/>
+  <g fill="none" stroke="#2a3240" stroke-width="2">
+    <rect x="100" y="260" width="600" height="120" rx="18"/>
+    <circle cx="220" cy="420" r="42"/>
+    <circle cx="580" cy="420" r="42"/>
+  </g>
+  <text x="400" y="200" text-anchor="middle" fill="#aab4c0" font-family="Inter, Arial" font-size="28">Car Image</text>
+</svg>
+
