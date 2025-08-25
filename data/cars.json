@@ -1,0 +1,13 @@
+[
+  {"id":"1","make":"Toyota","model":"Camry","year":2021,"price":24500,"mileage":18500,"type":"Sedan","color":"Silver","fuel":"Gasoline","transmission":"Automatic","drivetrain":"FWD","location":"Austin, TX","image":""},
+  {"id":"2","make":"Honda","model":"Civic","year":2020,"price":20500,"mileage":24000,"type":"Sedan","color":"Blue","fuel":"Gasoline","transmission":"Automatic","drivetrain":"FWD","location":"San Diego, CA","image":""},
+  {"id":"3","make":"Tesla","model":"Model 3","year":2022,"price":38900,"mileage":12000,"type":"Sedan","color":"White","fuel":"Electric","transmission":"Single-speed","drivetrain":"RWD","location":"Seattle, WA","image":""},
+  {"id":"4","make":"Ford","model":"F-150","year":2019,"price":29900,"mileage":48000,"type":"Truck","color":"Black","fuel":"Gasoline","transmission":"Automatic","drivetrain":"4WD","location":"Denver, CO","image":""},
+  {"id":"5","make":"Subaru","model":"Outback","year":2021,"price":31400,"mileage":21000,"type":"SUV","color":"Green","fuel":"Gasoline","transmission":"CVT","drivetrain":"AWD","location":"Portland, OR","image":""},
+  {"id":"6","make":"BMW","model":"X3","year":2018,"price":25900,"mileage":52000,"type":"SUV","color":"Gray","fuel":"Gasoline","transmission":"Automatic","drivetrain":"AWD","location":"Chicago, IL","image":""},
+  {"id":"7","make":"Hyundai","model":"Elantra","year":2020,"price":17700,"mileage":30000,"type":"Sedan","color":"Red","fuel":"Gasoline","transmission":"Automatic","drivetrain":"FWD","location":"Miami, FL","image":""},
+  {"id":"8","make":"Mazda","model":"CX-5","year":2019,"price":22900,"mileage":41000,"type":"SUV","color":"White","fuel":"Gasoline","transmission":"Automatic","drivetrain":"AWD","location":"Boston, MA","image":""},
+  {"id":"9","make":"Volkswagen","model":"Golf","year":2017,"price":13500,"mileage":65000,"type":"Hatchback","color":"Silver","fuel":"Gasoline","transmission":"Manual","drivetrain":"FWD","location":"Madison, WI","image":""},
+  {"id":"10","make":"Toyota","model":"RAV4","year":2022,"price":33900,"mileage":15000,"type":"SUV","color":"Blue","fuel":"Hybrid","transmission":"CVT","drivetrain":"AWD","location":"Phoenix, AZ","image":""}
+]
+
